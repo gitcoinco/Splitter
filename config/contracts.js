@@ -56,10 +56,8 @@ module.exports = {
       //SimpleStorage: {
       //  args: [ 100 ]
       //}
-      Splitter: {
-      },
-      TestToken: {
-      }
+      Splitter: {},
+      TestToken: {}
     }
   },
 
