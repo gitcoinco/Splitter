@@ -1,12 +1,16 @@
 {
   "name": "splitter",
   "version": "0.0.1",
-  "description": "",
+  "description": "Orchestrates sending ERC20 tokens across two accounts",
   "scripts": {
     "test": "embark test"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "ethereum",
+    "erc-20",
+    "splitter-contract"
+  ],
+  "author": "team@gitcoin.co",
   "license": "MIT",
   "devDependencies": {
     "embarkjs-connector-web3": "^4.0.0"
