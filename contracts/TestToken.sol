@@ -1,5 +1,5 @@
 pragma solidity ^0.5.0;
-import "./math/SafeMath.sol";
+import "./inherited/SafeMath.sol";
 
 contract TestToken {
     using SafeMath for uint256;

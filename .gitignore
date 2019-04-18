@@ -1,0 +1,12 @@
+
+# Build generated files #
+######################
+node_modules
+.embark
+embarkArtifacts
+dist
+
+# OS generated files #
+######################
+.DS_Store*
+*.swp
