@@ -29,7 +29,7 @@ contract("Splitter", () => {
     assert.strictEqual(parseInt(accountZeroBalance), parseInt(totalSupply));
 
     let approval = await testToken.methods.approve(splitter._address, web3.utils.toHex(100)).send(accounts[0]);
-    let splitTransfer = await splitter.methods.splitTransfer(accounts[1], accounts[2], 10, 90, testToken._address).send(accounts[0]);
+    let splitTransfer = await splitter.methods.splitTransfer(accounts[0], accounts[1], accounts[2], 10, 90, testToken._address).send(accounts[0]);
 
     accountZeroBalance = await testToken.methods.balanceOf(accounts[0]).call();
     accountOneBalance = await testToken.methods.balanceOf(accounts[1]).call();

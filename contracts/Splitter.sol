@@ -9,6 +9,7 @@ import "./inherited/ERC20.sol";
 contract Splitter {
 
     /**
+     * @param fromAddress - the address to send the tokens from
      * @param toFirst - the address of the first account
      * @param valueFirst - ERC20 tokens to be sent to toFirst
      * @param toSecond - the address of the second account
@@ -16,6 +17,7 @@ contract Splitter {
      * @param tokenAddress - address of the ERC20 token
     */
     function splitTransfer(
+        address fromAddress,
         address toFirst,
         address toSecond,
         uint256 valueFirst,
@@ -24,8 +26,8 @@ contract Splitter {
     )
         external
     {
-        ERC20(tokenAddress).transferFrom(msg.sender, toFirst, valueFirst);
-        ERC20(tokenAddress).transferFrom(msg.sender, toSecond, valueSecond);
+        ERC20(tokenAddress).transferFrom(fromAddress, toFirst, valueFirst);
+        ERC20(tokenAddress).transferFrom(fromAddress, toSecond, valueSecond);
     }
 
 }
